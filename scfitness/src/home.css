@@ -1,0 +1,69 @@
+.schedule{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.today{
+    text-align: center;
+    background-color: #DFDFDF;
+    border:20px;
+    height: 300px;
+    width: 575px;
+    border-radius: 10px;
+    margin-left:20px;
+    margin-right:20px;
+    
+}
+.tommorow{
+
+    text-align: center;
+    border:20px;
+    border-radius: 10px;
+    background-color: #DFDFDF;
+    height: 300px;
+    width: 360px;
+    margin-left:20px;
+    margin-right:20px;
+}
+.day-after{
+
+    text-align: center;
+    background-color: #DFDFDF;
+    border-radius: 10px;
+    border:20px;
+    height: 300px;
+    width: 360px;
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.bottom {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    
+}
+.reference{
+    text-align: center;
+    background-color: #DFDFDF;
+    border-radius: 10px;
+    border:20px;
+    height: 300px;
+    width: 975px;
+    margin-left:20px;
+    margin-right:20px;
+    margin-top: 40px;
+}
+
+.goals{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 360px;
+    background-color: #DFDFDF;
+    text-align: center;
+    height: 300px;
+    margin-top: 40px;
+    border-radius: 10px;
+
+
+}
