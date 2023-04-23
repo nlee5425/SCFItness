@@ -3,6 +3,7 @@ import { collection, getDocs, query, where, onSnapshot } from 'firebase/firestor
 import { db } from './firebase';
 import { Link } from "react-router-dom";
 import './navbar.css';
+import './postlogin.css';
 import { auth } from './firebase';
 import './goals.css';
 
@@ -18,16 +19,24 @@ function Post({user}) {
     if ( goals.length == 0 ) {
         return (
             <div className = "whole">
-                <h1>Tell us a little about your fitness goals!</h1>
-                <Link to="/goal1">Fill out your goals</Link>
+                <div className ="world">
+                    <div className="text">
+                        <h1>Tell us a little about your fitness goals!</h1>
+                    </div>
+                    <Link to="/goal1" className="button">Fill out your goals</Link>
+                </div>
             </div>
         );
     }
     else {
         return (
             <div className = "whole">
-                <h1>Welcome back to FitnessSC</h1>
-                <Link to="/home">Go to Home Page</Link>
+                <div className ="world">
+                    <div className="text">
+                        <h1>Welcome back to FitnessSC</h1>
+                    </div>
+                    <Link to="/home" className="button">Go to Home Page</Link>
+                </div>
             </div>
         );
     }

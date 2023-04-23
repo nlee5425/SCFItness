@@ -89,13 +89,14 @@ function Home({user}) {
 
             </div>
 
-            <div className ="container" >
+            <div className ="" >
 
                 <div className = "schedule">
                     <div className = "today">
+                        <h1>TODAY</h1>
                     {today.map((e, index) => { 
                         if ( todayct1 == 0 ) {
-                            return <h1>REST DAY!</h1>
+                            return <h4>REST DAY!</h4>
                         }
                         else if ( todayct1 == 1) {
                             return (<small> 
@@ -171,9 +172,10 @@ function Home({user}) {
                     })}
                     </div>
                     <div className = "tommorow">
+                        <h3>TOMMOROW</h3>
                     {tommorow.map((e, index) => { 
                         if ( tmmrct1 == 0 ) {
-                            return <h1>REST DAY!</h1>
+                            return <h4>REST DAY!</h4>
                         }
                         else if ( tmmrct1 == 1) {
                             return (<small> 
@@ -249,9 +251,10 @@ function Home({user}) {
                     })}
                     </div>
                     <div className = "day-after">
+                    <h3>In 2 Days</h3>
                     {dayafter.map((e, index) => { 
                         if ( dayafterct1 == 0 ) {
-                            return <h1>REST DAY!</h1>
+                            return <h4>REST DAY!</h4>
                         }
                         else if ( dayafterct1 == 1) {
                             return (<small> 
@@ -329,12 +332,13 @@ function Home({user}) {
                 </div>
                 <div className = "bottom" >
                     <div className = "reference">
-                        references
+                        <h4>REFERENCES</h4>
                     </div>
 
                     <div className = "goals">
+                        <h3>MY GOALS</h3>
                     {goals.map((e, index) => { 
-                        return <h1> {e.goal}</h1>
+                        return <h6> {e.goal}</h6>
                     })}
                     </div>
                 </div>

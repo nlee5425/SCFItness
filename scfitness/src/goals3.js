@@ -45,10 +45,12 @@ function Goal3({user}) {
                         <h3>Do you have any weight goals?</h3>
                         {/* <label for="current-weight">Current weight:</label>
                         <input type="text" id="current-weight" name="current-weight"/> */}
-                        <label for="ideal-weight">Ideal weight:
+                        <label for="ideal-weight">Ideal weight: 
                             <input type="number" id="goal" name="goal" onChange={(e) => handleChangeInput(e)} required/>  
                         </label>
-                        <Link to="/home" className="next-button" onClick = {handleSubmit}> Next </Link>
+                        <div className="button_case">
+                            <Link to="/home" className="button" onClick = {handleSubmit}> Next </Link>
+                        </div>
                     </form>
                 </div>
         </div>

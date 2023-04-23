@@ -1,13 +1,11 @@
 
-
-
 .navbar{
 
     text-align:center;
     background-color: #04c35c;
     width: 100%;
     position: fixed;
-    height: 40px;
+    height: 60px;
     top: 0px;
     display:flex;
     flex-wrap: wrap;
@@ -28,15 +26,15 @@
     font-weight: bold;
 }
 .add-form:hover {
-    background-color: purple;
+    background-color: #2B534C;
 }
 
 .add-form:hover .FormButton {
-    color: #EFC3E6;
+    color: white;
 }
 
 .list:hover .FormButton {
-    color: #EFC3E6;
+    color: white;
 }
 
 .FormButton, .signout {
@@ -57,12 +55,11 @@
 }
 
 .list:hover{
-    background-color: purple;
+    background-color: #2B534C;
 }
 
 .sign-button:hover{
-    background-color: purple;
-
+    background-color: #2B534C;
 }
 
 

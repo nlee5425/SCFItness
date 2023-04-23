@@ -318,7 +318,9 @@ function Goal2({user}) {
                         <option>Lower Body</option>
                         <option>All body</option>
                     </select>
-                    <Link to="/goal3" className="next-button" onClick = {handleSubmit}> Next </Link>
+                    <div className="button_case">
+                        <Link to="/goal3" className="button" onClick = {handleSubmit}> Next </Link>
+                    </div>
                     </form>
                 </div> 
         </div>

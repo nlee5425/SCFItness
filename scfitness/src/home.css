@@ -4,66 +4,82 @@
     margin-top: 100px;
 }
 .today{
+    padding-top: 15px; 
     text-align: center;
-    background-color: #DFDFDF;
-    border:20px;
+    background-color: #2B534C;
+    color: white; 
+    border: 20px;
     height: 300px;
-    width: 575px;
+    width: 500px;
     border-radius: 10px;
-    margin-left:20px;
-    margin-right:20px;
-    
+    margin-left:0px;
+    margin-right:20px; 
+    padding-left: 5px; 
+    padding-right: 5px; 
 }
 .tommorow{
-
+    padding-top: 15px; 
     text-align: center;
     border:20px;
     border-radius: 10px;
     background-color: #DFDFDF;
     height: 300px;
-    width: 360px;
-    margin-left:20px;
-    margin-right:20px;
+    width: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #FF6420;
+    color: white;
+    padding-left: 5px; 
+    padding-right: 5px; 
 }
 .day-after{
-
+    padding-top: 15px; 
     text-align: center;
     background-color: #DFDFDF;
     border-radius: 10px;
     border:20px;
     height: 300px;
-    width: 360px;
+    width: 300px;
     margin-left:20px;
     margin-right:20px;
+    padding-left: 5px; 
+    padding-right: 5px; 
+    color: #2B534C; 
 }
 
 .bottom {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 100px;
-    
+    margin-top: 50px;
+    margin-bottom: 50px; 
 }
 .reference{
     text-align: center;
     background-color: #DFDFDF;
     border-radius: 10px;
-    border:20px;
+    border: 20px;
     height: 300px;
-    width: 975px;
-    margin-left:20px;
-    margin-right:20px;
-    margin-top: 40px;
+    width: 700px;
+    margin-left: 0px;
+    margin-right: 20px;
+    margin-top: 0px;
+    padding-top: 15px; 
+    padding-left: 5px; 
+    padding-right: 5px; 
 }
 
 .goals{
     margin-left: 20px;
     margin-right: 20px;
     width: 360px;
-    background-color: #DFDFDF;
+    background-color: #DFDFDF; 
     text-align: center;
     height: 300px;
-    margin-top: 40px;
     border-radius: 10px;
-
-
+    padding-top: 15px; 
+    padding-left: 5px; 
+    padding-right: 5px; 
+}
+.bottom{
+    justify-content: center;
 }

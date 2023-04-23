@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+}
+.text{
+    margin-bottom: 20px; 
+}
+.button_case{
+    margin-left: 10px; 
+}
+.button{
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-top: 7px; 
+    padding-bottom: 7px; 
+    text-decoration: none; 
+}

@@ -39,17 +39,18 @@ function Goal1({user}) {
         <div className = "whole">
             <div className="form">        
                     <form onSubmit={handleSubmit}>
-                    <h4>Take a short survey to get started.</h4>
-                    <h3>What are your fitness goals?</h3>
-                    <h4>Goal:</h4>
-                    <select id="goal" name="goal" onChange={(e) => handleChangeInput(e)} required>
-                        <option value = "N/A">N/A</option>
-                        <option>Gain Muscle</option>
-                        <option>Lose Weight</option>
-                        <option>Cardio</option>
-                    </select>
-                    <Link to="/goal2" className="next-button" onClick = {handleSubmit}> Next </Link>
-
+                        <h4>Take a short survey to get started.</h4>
+                        <h3>What are your fitness goals?</h3>
+                        <h4>Goal:</h4>
+                        <select id="goal" className="box" name="goal" onChange={(e) => handleChangeInput(e)} required>
+                            <option value = "N/A">N/A</option>
+                            <option>Gain Muscle</option>
+                            <option>Lose Weight</option>
+                            <option>Cardio</option>
+                        </select>
+                        <div className="button_case">
+                            <Link to="/goal2" className="button" onClick = {handleSubmit}> Next </Link>
+                        </div>
                     </form>
             </div> 
 

@@ -1,0 +1,35 @@
+.world{
+    padding-top: 6%; 
+}
+img{
+    width: 90%; 
+}
+.newh1{
+    text-align: left;
+    padding-bottom: 5px;
+}
+.newh3{
+    text-align: left; 
+    padding-bottom: 30px;
+}
+.button_css{
+    text-align: center; 
+}
+.button{
+    border-radius: 0%;
+    width: 50%; 
+    background-color: #04C35C; 
+    border: none; 
+    border-color: #04C35C; 
+    color: white; 
+    border-radius: 5px; 
+    font-size: 20px; 
+}
+.button:hover {
+    background-color: grey; /* Green */
+    color: white;
+}
+.right{
+    padding-left: 0px; 
+    margin-left: 0px; 
+}
