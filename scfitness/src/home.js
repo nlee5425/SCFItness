@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import './navbar.css';
 import './home.css';
 import { auth } from './firebase';
+import YoutubeEmbed from "./YoutubeEmbed";
+
 
 
 function Home({user}) {
@@ -48,21 +50,33 @@ function Home({user}) {
         data.sort((a,b) => a.timestamp = b.timestamp);
         setToday(data);
     });
-    console.log(today);
     const tommorowq = query(workoutCol, where("email", "==", user.email));
     const tmmrwork = onSnapshot(tommorowq, snapshot => {
         const data = snapshot.docs.map(change => change.data());
         data.sort((a,b) => a.timestamp = b.timestamp);
         setTommorow(data);
     });
-    console.log(tommorow);
     const dayafterq = query(workoutCol, where("email", "==", user.email));
     const dayafterwork = onSnapshot(dayafterq, snapshot => {
         const data = snapshot.docs.map(change => change.data());
         data.sort((a,b) => a.timestamp = b.timestamp);
         setDayafter(data);
     });
-    console.log(dayafter);
+
+    const todaydate = new Date();
+    const dayOfWeek = todaydate.getDay();
+    const weekDates = [];
+    for (let i = 0; i < 3; i++) {
+        const day = new Date(todaydate);
+        day.setDate(todaydate.getDate() + i);
+        weekDates.push(day);
+    }
+
+    const formattedweekDates = [];
+    const options = { month: 'short', day: 'numeric' };
+    for (let i = 0; i < 3; i++) {
+        formattedweekDates.push(weekDates[i].toLocaleString('en-US', options));
+    }
 
     return (
         <div className = "whole">
@@ -93,10 +107,14 @@ function Home({user}) {
 
                 <div className = "schedule">
                     <div className = "today">
-                        <h1>TODAY</h1>
+                        <div className = "formatter">
+                            <h3>{formattedweekDates[0]}</h3>
+                        <h3>TODAY:</h3>
+                        </div>
+                        <div className = "workoutsched1">
                     {today.map((e, index) => { 
                         if ( todayct1 == 0 ) {
-                            return <h4>REST DAY!</h4>
+                            return <h4>ACTIVE REST DAY! <br></br> <br></br>Enjoy the break but stay somewhat active like going on a walk or playing an active sport!</h4>
                         }
                         else if ( todayct1 == 1) {
                             return (<small> 
@@ -171,11 +189,15 @@ function Home({user}) {
                         }
                     })}
                     </div>
+
+                    </div>
                     <div className = "tommorow">
-                        <h3>TOMMOROW</h3>
+                        <h3>{formattedweekDates[1]}</h3>
+                        <h3>TOMMOROW:</h3>
+                        <div className = "workoutsched2">
                     {tommorow.map((e, index) => { 
                         if ( tmmrct1 == 0 ) {
-                            return <h4>REST DAY!</h4>
+                            return <h4>ACTIVE REST DAY! <br></br> Enjoy the break but stay somewhat active like going on a walk or playing an active sport!</h4>
                         }
                         else if ( tmmrct1 == 1) {
                             return (<small> 
@@ -250,11 +272,14 @@ function Home({user}) {
                         }
                     })}
                     </div>
+                    </div>
                     <div className = "day-after">
-                    <h3>In 2 Days</h3>
+                    <h3>{formattedweekDates[2]}</h3>
+                    <h3>In 2 Days:</h3>
+                    <div className = "workoutsched3">
                     {dayafter.map((e, index) => { 
                         if ( dayafterct1 == 0 ) {
-                            return <h4>REST DAY!</h4>
+                            return <h4>ACTIVE REST DAY! <br></br> Enjoy the break but stay somewhat active like going on a walk or playing an active sport!</h4>
                         }
                         else if ( dayafterct1 == 1) {
                             return (<small> 
@@ -329,18 +354,40 @@ function Home({user}) {
                         }
                     })}
                     </div>
+
+                    </div>
                 </div>
                 <div className = "bottom" >
                     <div className = "reference">
-                        <h4>REFERENCES</h4>
+                        <h4>REFERENCES
+                        </h4>
+                        <small> Workouts formatted as #sets x num of reps - workout name</small>
+                        <br></br>
+                        <small>"Superset with next workout" means once you complete your current workout, immediately start the next workout</small>
+                        <div className = "youtube" >
+                            <div className = "vid">
+                                <YoutubeEmbed embedId = "ixkQaZXVQjs"/>
+                            </div>
+                            <div className = "vid">
+                                <YoutubeEmbed embedId = "BUcZ8sBM_e8"/>
+                            </div>
+                        </div>
+                        
                     </div>
+                    <div className = "goals-section">
+                        <div className = "goals">
+                            <h3>MY GOALS</h3>
+                        {goals.map((e, index) => { 
+                            return <h6> {e.goal}</h6>
+                        })}
 
-                    <div className = "goals">
-                        <h3>MY GOALS</h3>
-                    {goals.map((e, index) => { 
-                        return <h6> {e.goal}</h6>
-                    })}
+                        </div>
+                        <div className = "view-sched">
+                        <Link to="/sched" className="button">View This Weeks Schedule</Link>
+
+                        </div>
                     </div>
+                    
                 </div>
                 
             </div>

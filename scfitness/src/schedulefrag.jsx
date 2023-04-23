@@ -1,25 +1,94 @@
 import './schedulefrag.css';
 
 function Schedfrag(props) {
+
+    const today = new Date();
+    let dayOfWeek = today.getDay();
+    if ( dayOfWeek == 0 ) {
+        dayOfWeek += 7;
+    }
+    dayOfWeek--;
+    const beginningOfWeek = new Date(today);
+    beginningOfWeek.setDate(today.getDate() - (dayOfWeek));
+    const weekDates = [];
+    for (let i = 0; i < 7; i++) {
+        const day = new Date(beginningOfWeek);
+        day.setDate(beginningOfWeek.getDate() + i);
+        weekDates.push(day);
+    }
+
+    const formattedweekDates = [];
+    const options = { month: 'short', day: 'numeric' };
+    for (let i = 0; i < 7; i++) {
+        formattedweekDates.push(weekDates[i].toLocaleString('en-US', options));
+    }
+
     return (
+        <div className = "whole">
+            <div className = "header">
+            <small>Weekly View</small>
+            <br></br>
+            <h1>{formattedweekDates[0]} - {formattedweekDates[6]} </h1>
+            </div>
         <div className = "schedule">
+                <div className = "dayrow">
+                        <div className = "indivday">
+                            <small>Monday</small>
+                            <br></br>
+                            <small>{formattedweekDates[0]}</small>
+                        </div>
+                        <div className = "indivday">
+                            <small>Tuesday</small>
+                            <br></br>
+                            <small>{formattedweekDates[1]}</small>
+                        </div>
+                        <div className = "indivday">
+                            <small>Wednesday</small>
+                            <br></br>
+                            <small>{formattedweekDates[2]}</small>
+                            
+                        </div>
+                        <div className = "indivday">
+                            <small>Thursday</small>
+                            <br></br>
+                            <small>{formattedweekDates[3]}</small>
+                            
+                        </div>
+                        <div className = "indivday">
+                            <small>Friday</small>
+                            <br></br>
+                            <small>{formattedweekDates[4]}</small>
+                            
+                        </div>
+                        <div className = "indivday">
+                            <small>Saturday</small>
+                            <br></br>
+                            <small>{formattedweekDates[5]}</small>
+                            
+                        </div>
+                        <div className = "indivday">
+                            <small>Sunday</small>
+                            <br></br>
+                            <small>{formattedweekDates[6]}</small>
+                        </div>
+                </div>
+                <div className = "workoutrow">
+
                         <div className = "day">
-                            Monday    
-                            <small> 
-                                <br></br>
-                                {props.monzerolet} <br></br>
-                                {props.monfirstlet}<br></br>
-                                {props.monsecondlet}<br></br>
-                                {props.monthirdlet}<br></br>
-                                {props.monfourthlet}<br></br>
-                                {props.monfifthlet}<br></br>
-                                {props.monsixthlet}
-                            </small>
-                        
+                                    <small> 
+                                        <br></br>
+                                        {props.monzerolet} <br></br>
+                                        {props.monfirstlet}<br></br>
+                                        {props.monsecondlet}<br></br>
+                                        {props.monthirdlet}<br></br>
+                                        {props.monfourthlet}<br></br>
+                                        {props.monfifthlet}<br></br>
+                                        {props.monsixthlet}
+                                    </small>
+                                
                               
                         </div>
                         <div className = "day">
-                            Tuesday
                             <small> 
                             <br></br>
                                 {props.tuezerolet} <br></br>
@@ -32,7 +101,6 @@ function Schedfrag(props) {
                             </small>
                         </div>
                         <div className = "day">
-                            Wednesday
                             <small> 
                             <br></br>
                                 {props.wedzerolet} <br></br>
@@ -45,7 +113,6 @@ function Schedfrag(props) {
                             </small>
                         </div>
                         <div className = "day">
-                            Thursday
                             <small> 
                             <br></br>
                                 {props.thuzerolet} <br></br>
@@ -58,7 +125,6 @@ function Schedfrag(props) {
                             </small>
                         </div>
                         <div className = "day">
-                            Friday
                             <small> 
                             <br></br>
                                 {props.frizerolet} <br></br>
@@ -71,7 +137,6 @@ function Schedfrag(props) {
                             </small>
                         </div>
                         <div className = "day">
-                            Saturday
                             <small> 
                             <br></br>
                                 {props.satzerolet} <br></br>
@@ -84,12 +149,15 @@ function Schedfrag(props) {
                             </small>
                         </div>
                         <div className = "day">
-                            Sunday
                             <small> 
                             <br></br>
                                 {props.sun} <br></br>
+                                
                             </small>
                         </div> 
+                </div>
+                        
+        </div>
         </div>
     );
 }

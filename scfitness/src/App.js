@@ -12,6 +12,7 @@ import Goal1 from './goals1';
 import Goal2 from './goals2';
 import Goal3 from './goals3';
 import Post from './postlogin';
+import Guest from './guest.js'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
   return (
     <div className="App">
         <Routes>
+          <Route path = "/guest" element ={<Guest />}/>
           <Route path="/" element={ user ? <Post user = {user}/> : <Login/>}/>
           <Route path="/goal1" element={<Goal1 user = {user}/>}/>
           <Route path="/goal2" element={<Goal2 user = {user}/>}/>

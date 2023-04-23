@@ -30,7 +30,15 @@ function Goal1({user}) {
                 alert('Please select a goal!');
             }
             else {
-                setGoal(value);
+                if ( value == "Gain Muscle") {
+                    setGoal("To gain more muscle throughout my body!");
+                }
+                else if ( value == "Lose Weight") {
+                    setGoal("To primarily lose weight!");
+                }
+                else {
+                    setGoal("Work more on my cardio!");
+                }
                 setEmail(user.email);
             }
         }

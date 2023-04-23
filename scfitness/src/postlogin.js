@@ -16,19 +16,7 @@ function Post({user}) {
         data.sort((a,b) => a.timestamp = b.timestamp);
         setGoals(data);
     });
-    if ( goals.length == 0 ) {
-        return (
-            <div className = "whole">
-                <div className ="world">
-                    <div className="text">
-                        <h1>Tell us a little about your fitness goals!</h1>
-                    </div>
-                    <Link to="/goal1" className="button">Fill out your goals</Link>
-                </div>
-            </div>
-        );
-    }
-    else {
+    if(goals.length != 0) {
         return (
             <div className = "whole">
                 <div className ="world">
@@ -36,6 +24,18 @@ function Post({user}) {
                         <h1>Welcome back to FitnessSC</h1>
                     </div>
                     <Link to="/home" className="button">Go to Home Page</Link>
+                </div>
+            </div>
+        );
+    }
+    else if ( goals.length == 0 ) {
+        return (
+            <div className = "whole">
+                <div className ="world">
+                    <div className="text">
+                        <h1>Tell us a little about your fitness goals!</h1>
+                    </div>
+                    <Link to="/goal1" className="button">Fill out your goals</Link>
                 </div>
             </div>
         );

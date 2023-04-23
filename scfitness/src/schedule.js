@@ -43,7 +43,6 @@ function Sched({user}) {
                 </Link>
                 </div>
             </div>
-
             <div className = "schedule">
             {today.map((e, index) => {       
                 return <Schedfrag key = {index} 

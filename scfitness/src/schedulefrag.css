@@ -1,14 +1,64 @@
 .day {
-    width: 135px;
-    height: 300px;
+    width: 150px;
+    /* height: 350px; */
     border: 2px solid black;
     margin: 6px;
-    background-color: gray;
-    
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    color:#2B534C;
+    text-align: left;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.day:hover {
+    background-color: #2B534C;
+    color: #FFFFFF;
+}
+.workoutrow {
+    display: flex;
+    flex-wrap: wrap;
+}
+.whole {
     text-align: center;
 }
 .schedule {
-    margin-left: 100px;
-    display: flex;
-    flex-wrap: wrap;
+    display:flex;
+    flex-wrap:wrap;
+}
+.dayrow {
+    display:flex;
+    flex-wrap:wrap;
+    text-align: center;
+   
+    /* height: 75px; */
+    width: 1150px;
+    background-color: #DAEBDE;
+    border-radius: 10px;
+    justify-content: center;
+    
+}
+.indivday {
+    color:#2B534C;
+    font-size: 20px;
+    font-weight: bold;
+    width: 150px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 6px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+
+    
+}
+.indivday:hover {
+    color: #FFFFFF;
+    background-color:#2B534C;
+    border-radius: 10px;
+    
+}
+.header {
+    color: #2B534C;
+    font-weight: bold;
 }

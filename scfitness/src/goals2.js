@@ -130,7 +130,15 @@ function Goal2({user}) {
                 let fourthlet = "";
                 let fifthlet = "";
                 let sixthlet = "";
-                setGoal(value);
+                if ( value == "Upper Body") {
+                    setGoal("Develop more of my Upper Body");
+                }
+                else if ( value == "Lower Body") {
+                    setGoal("Develop more of my Lower Body");
+                }
+                else {
+                    setGoal("Develop both Upper and Lower Body");
+                }
                 setEmail(user.email);
                 if ( value == "Upper Body") {
                     zerolet = "4 x 6 - 8 - Flat Dumbbell Bench Press";
