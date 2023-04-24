@@ -1,6 +1,7 @@
 import './App.css'; // import the styles used for App.js
 import './login.css';
 import React from 'react';
+import { Link } from "react-router-dom";
 import { signInWithGoogle } from './firebase';
 const Login = () => {
     return ( // the Login component just contains a Log In button
@@ -23,6 +24,11 @@ const Login = () => {
                             <button className="button" onClick={signInWithGoogle}>
                                 Sign In With Google
                             </button>
+                        </div>
+                        <div className = "guest">
+                            <h1>Skeptical?</h1>
+                            <h3>Be a guest for now and maybe we can change your mind!</h3>
+                            <Link to = "/guest" className = "button">Be a Guest</Link>
                         </div>
                     </div>
                 </div>

@@ -151,7 +151,10 @@ function Schedfrag(props) {
                         <div className = "day">
                             <small> 
                             <br></br>
-                                {props.sun} <br></br>
+                                {props.sun} Day <br></br>
+                                Although it is a rest day, make it your active rest day!
+                                Go on a walk or play a sport you like! 
+                                Keep your body in the active mindset!
                                 
                             </small>
                         </div> 
